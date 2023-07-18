@@ -1,0 +1,199 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+.personal_logon {
+    display: flex;
+}
+.personal_logon img {
+    max-width: 100%;
+    max-height: 300px;
+}
+.image-container{
+
+    font-size: 0;
+    
+}
+
+.locationwrap {
+    background-color: #000;
+    font-size: 14px;
+    color: #ffffff;
+
+    height: 50px;
+}
+
+.web_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    height: 50px;
+}
+
+.web_container_route {
+     margin-left: 67px;
+     margin-right: 160px;
+     padding: 0px 40px; 
+}
+
+.web_container_route a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+#arrow {
+    margin: 0px 12px;
+    color:#766e69;
+}
+
+.location_shop_money {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+   
+}
+
+.location , .store{
+   margin-right: 40px;
+}
+
+.money {
+    margin-right: 20px;
+}
+
+.money a {
+    text-decoration: none;
+    border-radius: 5px;
+    color: #000;
+    background-color: #ffffff;
+    margin-right: 3000px;
+}
+
+.location img, .store img{
+    width: 30px;
+}
+
+.location span, .location img,
+.store span, .store img {
+    vertical-align: middle;
+}
+
+.web_container_my {
+    display: flex;
+}
+
+.location_a_div a{
+    display: inline-block;
+    padding: 5px 13px;
+    margin-right: 90px;
+}
+
+.change_location_a{
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
+.change_a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 16px;
+}
+
+.orderlist_box{
+  
+    background-color: #f2ebe6;
+    padding: 30px 0px 30px 40px;
+    height: 900px;
+}
+
+.orderList strong{
+    font-size: 40px;
+    font-weight: 900;
+}
+
+.orderList {
+    padding: 0px 0px;
+}
+
+
+.cart_text p{
+   
+    font-size: 24px;
+    color: #766e69;
+}
+.orderlist_bar{
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 90px;
+}
+
+.orderlist_right  {
+    justify-content: center;
+    align-items: center;
+}
+
+.orderlist_right strong{
+    font-size: 30px;
+}
+
+.count {
+    color: #e22219;
+
+}
+.orderlist_box_text {
+    color: #766e69;
+    font-size: 24px;
+    justify-content: center;
+    text-align: center;
+}
+
+.discount_banner img {
+    width: 1160px;
+    height: 98px;
+    margin-top: 25px;
+}
+
+.orderList_data{
+    height: 560px;
+    padding: 370px 10px 30px 10px;
+    border-bottom: 1px solid #e4ded9;;
+}
+
+.fade_logo {
+    text-align: center;
+}
+
+.fade_logo img{
+    margin-top: -220px;
+    margin-right: 18px;
+    max-height: 220px;
+    max-width: 300px;
+}
+
+
+.tip {
+    font-size: 16px;
+    padding: 5px 80px 5px 40px;
+}
+
+.tip ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tip ul button {
+    width: 260px;
+    height: 60px;
+
+    background-color: #e22219;
+    border: #e22219;
+    border-radius: 5px;
+}
+.tip ul strong {
+    font-size: 25px;
+    color: #ffffff;
+}
