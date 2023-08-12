@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>버거킹</title>
+    <link rel="stylesheet" href="/resources/css/burgerking-main.css">
+</head>
+<body>
+<div id="app">
+    <div class="subWrap01">
+        <div class="headerWrap">
+            <div class="head_menuWrap">
+                <div class="web_container">
+                    <a href="#/home" aria-current="page" class="router-link-exact-active router-link-active">
+                        <h1 class="logo">버거킹 Logo</h1>
+                    </a>
+                    <div class="GNBWrap">
+                        <ul>
+                            <li class="">
+                                <button type="button">
+                                    <span>메뉴소개</span>
+                                </button>
+                                <ul class="submenu">
+                                    <li><a><span>스페셜&amp;할인팩</span></a></li>
+                                    <li><a><span>신제품(NEW)</span></a></li>
+                                    <li><a><span>프리미엄</span></a></li>
+                                    <li><a><span>와퍼&amp;주니어</span></a></li>
+                                    <li><a><span>치킨&amp;슈림프버거</span></a></li>
+                                    <li><a><span>올데이킹&amp;킹모닝</span></a></li>
+                                    <li><a><span>사이드</span></a></li>
+                                    <li><a><span>음료&amp;디저트</span></a></li>
+                                </ul>
+                            </li>
+                            <li class="menu_open">
+                                <button type="button">
+                                    <span>매장소개</span>
+                                </button>
+                                <ul class="submenu">
+                                    <li><a><span>매장찾기</span></a></li>
+                                </ul>
+                            </li>
+                            <li class="menu_open">
+                                <button type="button">
+                                    <span>이벤트</span>
+                                </button>
+                                <ul class="submenu">
+                                    <li><a><span>이벤트</span></a></li>
+                                </ul>
+                            </li>
+                            <li class="">
+                                <button type="button">
+                                    <span>브랜드스토리</span>
+                                </button>
+                                <ul class="submenu">
+                                    <li><a><span>BRAND</span></a></li>
+                                    <li><a><span>WHOPPER</span></a></li>
+                                    <li><a><span>COMM.</span></a></li>
+                                </ul>
+                            </li>
+                        </ul>    
+                        <button type="button" class="btn_branch">
+                            <strong>가맹점 문의</strong>
+                        </button>
+                        <button type="button" class="btn_order">
+                            <strong>딜리버리 주문</strong>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="contentsWrap eventWrap">
+            <div class="locationWrap WEB">
+                <div class="web_container">
+                    <div class="page_navi">
+                        <a href="#/home" class="">
+                            <span>HOME</span>
+                        </a>
+                        <span>매장찾기</span>
+                    </div>
+                </div>
+            </div>
+            <div class="contentsBox01 nopadding">
+                <div class="mapWrap">
+                    <div class="map_searchWrap">
+                        <div class="map_search_head">
+                            <div class="tab01">
+                            <ul class="item3">
+                                <li class="on">
+                                    <button type="button">
+                                        <span>가까운매장</span>
+                                    </button>
+                                </li>
+                                <li class="">
+                                    <button type="button">
+                                        <span>매장명검색</span>
+                                    </button>
+                                </li>
+                                <li class="">
+                                    <button type="button">
+                                        <span>지역검색</span>
+                                    </button>
+                                </li>
+                            </ul>
+                            </div>
+                            <div class="searchWrap">
+                                <div class="shop_search_option">
+                                <button type="button" class="btn_search_option">
+                                    <span>매장옵션</span>
+                                </button>
+                                <div class="popWrap m_FullpopWrap option_list">
+                                    <div class="popbox01">
+                                        <div class="M_headerWrap">
+                                            <div class="titleBar">
+                                                <h2 class="page_tit w_alignL">매장옵션</h2>
+                                                <div class="title_btn">
+                                                    <button type="button" class="btn_close btn_head_close">
+                                                        <span>Close</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="popcont">
+                                            <ul class="check_list01 shoptype_list">
+                                                <li>
+                                                    <label>
+                                                        <input type="checkbox" class="check02">
+                                                        <span>전체</span>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label>
+                                                        <input type="checkbox" class="check02">
+                                                        <span>
+                                                            <span class="shop_type delivery">딜리버리</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label>
+                                                        <input type="checkbox" class="check02">
+                                                        <span>
+                                                            <span class="shop_type king">킹오더</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label>
+                                                        <input type="checkbox" class="check02">
+                                                        <span>
+                                                            <span class="shop_type allday">24시간매장</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label>
+                                                        <input type="checkbox" class="check02">
+                                                        <span>
+                                                            <span class="shop_type morning">아침메뉴</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label>
+                                                        <input type="checkbox" class="check02">
+                                                        <span>
+                                                            <span class="shop_type parking">주차가능</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label>
+                                                        <input type="checkbox" class="check02">
+                                                        <span>
+                                                            <span class="shop_type drive">드라이브스루</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="pop_btn full_type">
+                                            <button type="button" class="btn02 st04">
+                                                <span>적용</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="container01">
+                                <button type="button" class="btn03 gps">
+                                    <span>현 위치로 매장검색 </span>
+                                </button>
+                                </div>
+                                <div class="container01" style="display: none;">
+                                <div class="r_srch01 st02">
+                                    <div class="inpbox">
+                                        <input type="text">
+                                        <button type="button" class="btn_del01 " style="display: none;">
+                                            <span>입력 텍스트 삭제</span>
+                                        </button>
+                                    </div>
+                                    <button type="button" class="btn_search02">
+                                        <span>Search</span>
+                                    </button>
+                                </div>
+                                </div>
+                                <div class="container01" style="display: none;">
+                                    <div class="form_list">
+                                        <select class="st04">
+                                        <option value="" disabled="disabled">특별/광역시</option>
+                                        <option value="11">서울특별시</option>
+                                        <option value="21">부산광역시</option>
+                                        <option value="22">대구광역시</option>
+                                        <option value="23">인천광역시</option>
+                                        <option value="24">광주광역시</option>
+                                        <option value="25">대전광역시</option>
+                                        <option value="26">울산광역시</option>
+                                        <option value="29">세종특별자치시</option>
+                                        <option value="31">경기도</option>
+                                        <option value="32">강원도</option>
+                                        <option value="33">충청북도</option>
+                                        <option value="34">충청남도</option>
+                                        <option value="35">전라북도</option>
+                                        <option value="36">전라남도</option>
+                                        <option value="37">경상북도</option>
+                                        <option value="38">경상남도</option>
+                                        <option value="39">제주특별자치도</option>
+                                        </select>
+                                        <select class="st04">
+                                            <option value="">군, 구</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container01 search_result">
+                        </div>
+                        <button type="button" class="WEB btn_mapsearch_open">
+                            <span>검색 영역 보기/숨기기</span>
+                        </button>
+                    </div>
+                    <div class="api">
+                        <div id="map" style="width:100%;height:470px;"></div>
+                            <script type="text/javascript" src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=ut62adbc95&callback=initMap"></script>
+                            <script type="text/javascript">
+                                var map = null;
+    
+                                function initMap() {
+                                    map = new naver.maps.Map('map', {
+                                        center: new naver.maps.LatLng(35.16272645730008, 129.05322584832712),
+                                        zoom: 14
+                                    });
+                                    var marker = new naver.maps.Marker({
+                                        position: new naver.maps.LatLng(35.154958108944484, 129.05802313148288),
+                                        map: map
+                                    });
+                                    var marker = new naver.maps.Marker({
+                                        position: new naver.maps.LatLng(35.17053639954338, 129.069818497692),
+                                        map: map
+                                    });
+                                    var marker = new naver.maps.Marker({
+                                        position: new naver.maps.LatLng(35.15280193701259, 129.0250187082866),
+                                        map: map
+                                    });
+                                }
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps-geocoder.js"></script>
+<script src="/resources/js/main.js"></script>
+</body>
+</html>
