@@ -1,0 +1,120 @@
+* {
+    box-sizing: border-box;
+}
+
+.modal2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+ 
+    width: 100%;
+    height: 150%;
+    
+    display: none;
+
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal_content2 {
+    /* position: fixed; Stay in place */
+
+    position: absolute;
+    top: 5%;
+    left: 30%;
+    background-color: #f7f2ef;
+
+    width: 580px;
+    height: 400px;
+
+    
+}
+
+.modal_top2{
+    display: flex;
+   
+    justify-content: space-between;
+    background-color: #fff;
+
+}
+.closeBtn2 {
+    margin-right: 30px;
+}
+
+.modal_top2 span {
+    margin: 30px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.modal_top2 button {
+    border-style: none;
+    cursor: pointer;
+    background-color: #fff;
+    font-size: 30px;
+}
+
+.modal_middle2 {
+	height: 230px;
+	margin:none;
+}
+
+.modal_middle2 ul {
+    display: flex;
+    list-style: none;
+}
+
+.menuList201 p, .menuList202 p {
+    display: flex;
+    justify-content: center;
+}
+
+.menuList201 button, .menuList202 button {
+    border-style: none;
+    background-color: #f7f2ef;
+    cursor: pointer;
+}
+
+.menuList2 {
+	padding:0;
+}
+
+.modal_middle2 li {
+	margin-left:30px;
+	margin-right: 0px;
+	margin-top: 30px;
+}
+
+.tit2 {
+    font-size: 16px;
+    margin-bottom: 3px;
+}
+
+.price2 {
+    margin-top: 0px;
+}
+
+
+.tit2 , .price2 {
+    font-weight: 500;
+}
+.modal_middle2 img {
+    width: 180px;
+    height: 120px;   
+}
+
+.modal_bottom2 div {
+    background-color: #d72300;
+    width: 580px;
+    height: 80px;
+}
+
+.modal_bottom2 button{
+    cursor: pointer;
+    width: 580px;
+    height: 80px;
+    border-style: none;
+    background-color: #d72300;
+    color: #fff;
+    font-size: 26px;
+    font-weight: bold;
+}

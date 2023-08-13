@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/delivery_home.css">
+    <link rel="stylesheet" href="/static/css/menuModal.css">
+    <link rel="stylesheet" href="/static/css/additionalMenuModal.css">
+    
+    <title>딜리버리</title>
+
+</head>
+<body>
+   <div class="header_div" style="position: fixed; ">
+        
+        <div class="header_left_top" style="padding-top: 10px;">
+            <span> <a>브랜드홈</a></span>
+            <span> <a>로그아웃</a> </span>
+            <span><a>MY킹</a></span>
+            <span><a>고객센터</a></span>
+        </div>
+
+        <div class="header_bottom_div">
+            <div class="header_bottom_left">
+                <img src="https://www.burgerking.co.kr/dist/img/logo_delivery.26d1d682.png">
+                <span style="font-size: 40px; font-weight: bold; margin-left:5px;">딜리버리</span>
+            </div>
+            
+            <div class="header_info" style="margin-top :0px;">
+                <div >
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAYAAABXuSs3AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NjcxRTM3NjUwNDEyMTFFOTg1RDhCNkM3NUZDQkI0RjEiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NjcxRTM3NjYwNDEyMTFFOTg1RDhCNkM3NUZDQkI0RjEiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo2NzFFMzc2MzA0MTIxMUU5ODVEOEI2Qzc1RkNCQjRGMSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo2NzFFMzc2NDA0MTIxMUU5ODVEOEI2Qzc1RkNCQjRGMSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Ptrgt6YAAAMJSURBVHja3FlNj9JQFH0QSFBRQkgkEeMK3UJIxLiYBYgmw0p2A3/AWTkJ/ApWJmTQf4GGjRMnsNPBWTGAGyMQE900I18uYXje27yS2hTb8h4FPMkhKb09Pe/lffTe5yBiEQKGgbeBN9l/v4ES8BvwJ9kS3AG+BFaBQyA14JDFHrFnbUcKeAKcmTC7jDOmkbLD8EPgRw6zy/iJaQuHB3gMvFqDaYVX7B0eUabvA5trNKxlk72Te2hINppWKPEMnUdsKaMb4oR5sITwhnpar+fDZk1fs3lMG/EL8LoZ48dbZFrha61Jh+Y6DjwDOledGG63mySTSRKNRuXrZrNJ6vU6mU6nPIvEHPgYeK53ExvR4OmZVCpFe70e1aLf78v3OHu9odPRMvZ5hNPpNJ3NZnQZ8B7GcJrf1zN+uqqg1+ulkiRRI2AMxnIYP9WavseznedyOWoWGMv5WYBeF5MwwzMhY7HYWmJ1gB6fq40/4VJzOtcS+49P6oXxPR6ldrttOrbT6fAa31OnW1yz3e/308FgYDi+MQZjBWxI6JkkROxu2WyWzufzpabxHsYI2knRMzkQtTXjiqHX8/gf52qi5QHuRIfAN6KyDp/PRzKZDIlEIvJ1q9UilUqFjMdjkRnZofJDd4wvXPAz4m1+IBCQe9oMJpMJuby85H3leOXJ6XK5aD6fp91ul1oFPlMoFGQNnslpeTn0eDy0VqtRXqAGaq1g/K7S9SMrD5ZKJSoKqGXR9FA9ZqpmHwwGgxSSAmHGUQs1LRivqrf8utlZkUgkCIxNYesaaqGmBdTUxt+y1hiXY0Mh4WUyC5ro8Z3a+HelJWZyStGwoFljXv/6Bn9Fth8Lj+rB+h742ah61Gg0SLFYFOoGNU3gnHnURXzNFVmelC1u1LLyLhSElpXgLrasBHfjvy567nSZeacL++qjFDvH/IWIoxT14VXZhsOrssjDK70ytGjTZ2bWaRF4Cvwg4IAWNZ5t6kj8iH0jm0lGRqKOxB2CG4Ip1QPMn4G3lPwY+Av4FfhD1Iv+CDAAYvQc/hsxCPEAAAAASUVORK5CYII=">
+                </div>
+                <div>
+                    <span>테스트님 안녕하세요</span>
+                    <br>
+                    <storng style="font-weight: bold;">MY킹 바로가기 ></strong>
+                </div>
+            </div>
+        </div>
+
+   </div>
+
+
+
+	
+    <div class="personal_logon">
+        <div class="image-container" >
+            <a href="딜리버리주문내역">
+                <img src="/templates/images/delivery_orderlist.png" >
+            </a>
+        </div>
+        <div class="image-container">
+            <a href="카트">
+                <img src="/templates/images/delivery_cart.png" >
+            </a>
+        </div>
+    </div>
+
+    <div class="locationwrap">
+        <div class="web_container">
+            <div class="web_container_route">
+                <a href="딜리버리"><span>딜리버리</span></a>
+                <a href="My킹" id="arrow">></a>
+                <a href="My킹"><span>메뉴</span></a>
+            </div>
+
+
+            <div class="web_container_my">
+                <div class="location_shop_money">
+                    <div class="location">
+                        <img src="images/location.png">
+                        <span>부산광역시 동래구 동래로 5(...</span>
+                    </div>
+                    <div class="store">
+                        <img src="images/store.png">
+                        <span>부산수안역점</span>
+                    </div>
+                    <div class = "money">
+                        <span>
+                            최소주문금액 : 
+                            <span>14,000원</span>
+                            /
+                            <span>배달팁 : 0원</span>
+                        </span> 
+                    </div>  
+                </div>
+                <div class="location_a_div">
+                    <a href="주소변경사이트" class="change_location_a">
+                         <strong class="change_a">변경</string>
+                    </a>
+                </div>
+            </div>  
+        </div>    
+    </div>
+
+    <div class="orderlist_box">
+        <div class="orderlist_bar">
+            <div class="orderList">
+                <strong>메뉴</strong>
+            </div>
+            <div class="orderlist_right">
+              
+                <button class="orderList_1">신제품(NEW)</button>
+                <button type="button" class="orderList_2">프리미엄</button>
+                <button class="orderList_3">와퍼&주니어</button>
+                <button class="orderList_4">치킨&슈림프버거</button>
+                <button class="orderList_5">사이드</button>
+                <button class="orderList_6">음료&디저트</button>
+    
+            </div>
+        </div>
+        
+        <div class="orderList_data">
+            <div class="orderlist_box_text">
+                <ul class="prdmenu_list">
+                	<!-- <button type="button" class="menuBtn">
+                        <li>
+                            <div class="prd_img">
+                            <img src="images/exburger.png">
+                            </div>
+                            <div>
+                                <p class="tit"><strong>프리미엄팩 1</strong></p>
+                                <p class="price">₩22,000</p>
+                                <p id = "mainmenu_code_${content.mainmenuCode}" class = "mainmenu_code"> aaaaaaaa</p>
+                            </div>
+                        </li>
+                   </button> -->
+
+                    
+                </ul>
+            </div>
+        </div>  
+        <div class="notice">
+            <h4 style="font-size: 24px;" >유의사항</h4>
+            <Button>
+                <!-- <img src="images/!." alt=""> -->
+                <!-- <i class="fa-duotone fa-circle-exclamation" style="--fa-primary-color: #ffffff; --fa-secondary-color: #2e2e2e; --fa-secondary-opacity: 1;"></i> -->
+                <strong>원산지, 영양성분, 알레르기 유발성분 ></strong>
+            </Button>
+        </div>
+        <div class="tip">
+            <ul>
+                <div>
+                    <li>매장별 주문금액이 상이하니, 반드시 최소금액을 확인하기 바랍니다.</li>
+                    <li>배달 소요시간은 기상조건이나 매장 사정상 지연 또는 제한될 수 있습니다.</li>
+                    <li>고객님과 수 차례 연락을 시도한 후 연락이 되지 않는 경우 배달음식이 변질되거나 부패될 우려로 식품위생법상 위반될 여지가 있어 별도로 보관 하지 않으며, <strong>재배달 또는 환불처리가 어려울 수 있습니다.</strong> </li>
+                    <li>딜리버리 서비스 메뉴의 가격은 매장 가격과 상이하며, 딜리버리 시 타쿠폰을 사용하실 수 없습니다. (일부품목 배달 제외)</li>
+                    <li>배달 제품은 매장 행사(할인가격)에서 제외됩니다.</li>
+                    <li>제품 가격 및 메뉴 구성은 본사 사정상 변경될 수 있습니다.</li>
+                    <li>대량 주문의 경우 콜센터(1599-0505)주문으로만 가능합니다.</li>
+                    <li>주문 완료 후 변경 및 취소는 콜센터(1599-0505)에서만 가능합니다.</li>
+                </div>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- 모달창-->
+    <div class="modal">
+        <!-- <div class="modal_content">
+            <div class="modal_wrap">
+                <div class="menu_top">
+                    <span>메뉴 선택</span>
+                    <button class="closeBtn" type="button">❌</button>
+                </div>
+                <div class="menu_banner">
+                    <div>
+                        <span class="name">블랙바베큐콰트로치즈와퍼</span> <br>
+                        <span class="explain"> <br><br> 콰트로치즈와퍼가 <br>
+                         바비큐소스를 만나다!</span>
+                    </div>
+                    
+                    <div>
+                        <img src="https://d1cua0vf0mkpiy.cloudfront.net/images/menu/normal/6879ed8c-87c8-427b-8573-6b74ccba210a.png" alt="">
+                    </div>
+                </div>
+                <ul class="menuList_wrap">
+                    <li>
+                        <div>
+                            <img src="https://d1cua0vf0mkpiy.cloudfront.net/images/menu/thumnail/10f0f3c9-18b4-471d-834a-47a249ee4a4c.png" alt="">
+                        </div>
+                        
+                        <button type="button">
+                            <div>
+                            <p class="li01" style="padding-top: 20px;">블랙바베큐콰트로치즈와퍼 </p>  <p class="li01">라지세트</p>
+                            <p class="li02">블랙바베큐콰트로치즈와퍼 </p>  <p class="li02">프렌치프라이L + 콜라L</p>
+                            <p class="li03">￦12,900</p>
+                            </div>
+                        </button>
+                    </li>
+                    <li>
+                        <div>
+                            <img src="https://d1cua0vf0mkpiy.cloudfront.net/images/menu/thumnail/40073031-aa61-488b-9d3d-1242251db2bf.png" alt="">
+                        </div>
+                        
+                        <button type="button">
+                            <div>
+                            <p class="li01" style="padding-top: 20px;">블랙바베큐콰트로치즈와퍼 </p>  <p class="li01">세트</p>
+                            <p class="li02">블랙바베큐콰트로치즈와퍼 </p>  <p class="li02">프렌치프라이R + 콜라R</p>
+                            <p class="li03">￦12,200</p>
+                            </div>
+                        </button>
+                    </li>
+                    <li>
+                        <div>
+                            <img src="https://d1cua0vf0mkpiy.cloudfront.net/images/menu/thumnail/644b2798-1791-4219-8540-f3ddc82315a2.png" alt="">
+                        </div>
+                        
+                        <button type="button">
+                            <div>
+                            <p class="li01" style="padding-top: 20px;">블랙바베큐콰트로치즈와퍼 </p>  
+                            <p class="li02">단품 </p> 
+                            <p class="li03">￦10,200</p>
+                            </div>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div> -->
+    </div>
+    
+    <div class="modal2">
+        <div class="modal_content2">
+            <div class="modal_top2">
+                <span>사이드변경</span>
+                <button type="button" class="closeBtn2">❌</button>
+            </div>
+
+            <div class="modal_middle2">
+                <ul class="menuList2">
+                    <li class="menuList201">
+                        <button type="button">
+                                 <div>
+                                    <img src="https://d1cua0vf0mkpiy.cloudfront.net/images/menu/option/bf80c698-5f34-489e-92dc-6e4c636c27fd.png" alt="">
+                                </div>
+                                <p class="tit2">프렌치프라이L</p>
+                                <p class="price2">+0원</p>
+                        </button>
+                    </li>
+                    
+                    <li class="menuList202">
+                        <button type="button">
+                            <div>
+                                 <img src="https://d1cua0vf0mkpiy.cloudfront.net/images/menu/option/88f6b236-6c6c-4b16-be97-16b9db1e2cb3.png   ">
+                            </div>
+                            <p class="tit2" >치즈프라이교환</p>
+                            <p class="price2">+400원</p>
+                        </button>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="modal_bottom2">
+                    <div>
+                        <button type="button">
+                        <span>선택</span>
+                        </button>
+                    </div>
+            </div>
+        </div>
+    
+ 	<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="/static/js/order.js"></script>
+	
+</body>	
+</html>

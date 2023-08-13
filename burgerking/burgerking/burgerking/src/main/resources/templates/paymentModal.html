@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/paymentModal.css">
+    <title>결제하기</title>
+</head>
+<body>
+    <button type = "button" class="btn-open-popup">버튼</button>
+    <div class="modal">
+        <div class="modal_content">
+            <div class="modal_wrap">
+                <div class="menu_top">
+                    <span>결제수단</span>
+                    <button class="closeBtn" type="button">❌</button>
+                </div>
+                
+                <div class="menu_banner">
+                    <div>
+                        <button>
+                            <img src="" >
+                            <span>가상계좌</span>
+                        </button>
+                    </div>
+                    <div>
+                        <button>
+                            <img src="" >
+                            <span>계좌이체</span>
+                        </button>
+                    </div>
+                    <div>
+                        <button>
+                            <img src="" >
+                            <span>휴대폰</span>
+                        </button>
+                    </div>
+                    <div>
+                        <button>
+                            <img src="" >
+                            <span>신용카드</span>
+                        </button>
+                    </div>
+                    <div>
+                        <button>
+                            <img src="" >
+                            <span>PAYCPO</span>
+                        </button>
+                    </div>
+                    <div>
+                        <button>
+                            <img src="" >
+                            <span>네이버페이</span>
+                        </button>
+                    </div>
+                    <div>
+                        <button>
+                            <img src="">
+                            <span>카카오페이</span>
+                        </button>
+                    </div>
+                
+                </div>
+                <div>
+                    <button>주문하기</button>
+                </div>
+                
+</body>
+<script>
+    const modal = document.querySelector(".modal");
+    const btnOpenPopup = document.querySelector(".btn-open-popup");
+    const closeBtn = document.querySelector(".closeBtn");
+
+    btnOpenPopup.addEventListener('click', () => {
+        modal.style.display = "block";
+    });
+
+    closeBtn.addEventListener('click', () => {
+        modal.style.display = "none";
+    });
+</script>
+
+</html>

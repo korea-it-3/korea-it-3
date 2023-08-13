@@ -1,0 +1,396 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+}
+.personal_logon {
+    display: flex;
+}
+
+.personal_logon img {
+    max-width: 100%;
+    max-height: 300px;
+}
+.image-container{
+
+    font-size: 0;
+    
+}
+
+.locationwrap {
+    background-color: #000;
+    font-size: 14px;
+    color: #ffffff;
+
+    height: 50px;
+}
+
+.web_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    height: 50px;
+}
+
+.web_container_route {
+     margin-left: 67px;
+     margin-right: 160px;
+     padding: 0px 40px; 
+}
+
+.web_container_route a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+#arrow {
+    margin: 0px 12px;
+    color:#766e69;
+}
+
+.location_shop_money {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+   
+}
+
+.location , .store{
+   margin-right: 40px;
+}
+
+.money {
+    margin-right: 20px;
+}
+
+.money a {
+    text-decoration: none;
+    border-radius: 5px;
+    color: #000;
+    background-color: #ffffff;
+    margin-right: 3000px;
+}
+
+.location img, .store img{
+    width: 30px;
+}
+
+.location span, .location img,
+.store span, .store img {
+    vertical-align: middle;
+}
+
+.web_container_my {
+    display: flex;
+}
+
+.location_a_div a{
+    display: inline-block;
+    padding: 5px 13px;
+    margin-right: 90px;
+}
+
+.change_location_a{
+    text-decoration-line: none;
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
+.change_a {
+    text-decoration: none;
+    
+    color: #000000;
+    font-size: 16px;
+}
+/*  */
+.contentBox1 {  
+    height: 340px;
+    padding: 50px 60px;
+    background-color: #ffffff;
+}
+
+.contentBox2 {
+    padding: 0px 0px 40px;
+    margin: 0px 0px;
+}
+.contentBox_list {
+    display: flex;
+    font-size: 40px;
+    font-weight: 600;
+    
+    padding: 20px 0px;
+    border-bottom: #000 3px solid;
+}
+
+.contentBox_list strong {
+    font-weight: 900;
+}
+
+.myking_info {
+    width: 600px;
+    margin-top: 37px;
+   
+}
+
+.myking_info strong {
+    font-size: 30px;
+    margin:0px 15px 0px 0px;
+   
+
+}
+
+.hi {
+    font-size: 30px;
+    font-weight: 650;
+}
+
+.links {
+    font-size: 22px;
+    margin: 15px 0px 0px 0px;
+}
+#link {
+    text-decoration: none;
+    color: #000;
+    font-weight: 650;
+    padding:5px 18px 5px 0;
+}
+
+.button_details {
+    display: flex;  
+}
+
+.contentBox1 {
+    
+    justify-content: center;
+    max-width: 1150px;
+    margin: 0 auto; 
+}
+.middle {
+    display: flex;
+}
+
+.button_details {
+    overflow: hidden; 
+    width: 1300px;
+    height: 230px;
+}
+
+.button_details a {
+    text-decoration: none;
+    color: #000;
+}
+
+.button_details > div {
+    float: right;
+   
+}
+
+.menbership-link, .coupon-link, .order-history-link{
+    display: flex;
+    margin-top: 37px;
+}
+
+.membership_img, .coupon_img, .order_history_img {
+    margin: 0px 10px;
+    width: 74px;
+    height: 71px;
+   
+    border-left: 1px solid rgb(242, 235, 230);
+}
+
+.text-wrapper-membership, .text-wrapper-coupon, .text-wrapper-order-history {
+    font-size: 24px;
+    margin: 0px ;
+}
+
+.text-wrapper-membership {
+    width: 110px;
+}
+
+.text-wrapper-membership p, .text-wrapper-coupon p {
+    color: #4f4f4f;
+}
+
+.text-wrapper-coupon {
+    width: 210px; 
+}
+
+.menbership_p {
+    margin: 8px 0px ;
+}
+
+.my_coupon_p {
+    margin: 8px;
+}
+.text-wrapper-order-history {
+    font-size: 24px;
+    margin:auto;
+    
+}
+/* */
+.orderlist_box{
+    background-color: #f2ebe6;
+    padding: 30px 0px 20px;
+    height: 1200px;
+}
+
+
+.orderlist_box img{
+    width: 35px;
+}
+
+.orderlist_bar{
+    margin: 15px 310px;
+}
+
+.orderlist_bar dl {
+    font-size: 22px;
+}
+
+.userinfo_list {
+    padding: 0px 0px;
+}
+
+.userinfo_list strong {
+     font-size: 40px;
+     font-weight: 900;
+}
+
+.basicinfo_bar, .notbasicinfo_bar, .marketing_bar {
+    font-size: 20px;
+    color: #2e2e2e;
+}
+
+.info_basic dl, .info_notbasic dl {
+    display: flex;
+    margin: 35px;
+}
+
+
+
+
+.info_basic, .info_notbasic, .marketing_agree  {
+     background-color: #ffffff;
+}
+
+.info_basic {
+    height: 250px;
+    
+}
+.info_basic_box {
+    padding: 15px 30px 30px 30px;
+}
+
+.phone {
+ 
+    align-items: center;
+}
+.info_basic_box button {
+    background-color: #2e2e2e;
+    border: none;
+    border-radius: 5px;
+
+    width: 65px;
+    height: 40px;
+
+    margin-left: 3px;
+}
+
+.info_notbasic {
+    height: 250px;
+    padding: 15px 30px 10px 30px;
+}
+
+
+.select_birth select {
+    padding-top: 10px;
+    border: none;
+    width: 140px;
+    height: 30px;
+    
+}
+
+.marketing_agree  {
+    height: 150px;
+}
+.txt {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    color: #e22219;
+   
+}
+
+.marketing_agree_box {
+    padding: 3px 30px 30px 30px;
+}
+
+.marketing_agree_box div {
+    margin: 35px;
+}
+
+.lastbutton {
+    display: flex;
+    text-decoration: none;
+   
+    font-size: 24px;
+
+    text-decoration-line: none;
+    height: 66px;
+    margin: 40px 0px 45px 0px;
+
+    justify-content: center ;
+}
+
+.lastbutton a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration-line: none;
+}
+
+.lastbutton span {
+    display: flex;
+    vertical-align: middle;
+    justify-content: center;
+}
+
+.lastbutton_cancle, .lastbutton_change {
+    display: inline-block;
+    border: 1px solid #512314;
+    border-radius: 5px;
+
+    width: 214px;
+    height: 66px;
+
+}
+
+.lastbutton_cancle {
+    color: #512314;
+  
+}
+
+.lastbutton_change {
+    color: #ffffff;
+    background-color: #512314;
+}
+
+.leave {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.leave a {
+    text-decoration: none;
+    color: #2e2e2e;
+    font-size: 20px;
+    padding: 0PX 13PX 0PX 0PX;
+}
+
+dt {
+    width: 100px;
+}
+
