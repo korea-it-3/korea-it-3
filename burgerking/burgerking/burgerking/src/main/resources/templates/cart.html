@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/cart.css">
+    <link rel="stylesheet" href="/static/css/additionalMenuModal.css">
+    <title>카트</title>
+</head>
+<body>
+    <div class="header_div" style="position: fixed; ">
+        
+        <div class="header_left_top" style="padding-top: 10px;">
+            <span> <a>브랜드홈</a></span>
+            <span> <a>로그아웃</a> </span>
+            <span><a>MY킹</a></span>
+            <span><a>고객센터</a></span>
+        </div>
+
+        <div class="header_bottom_div">
+            <div class="header_bottom_left">
+                <img src="https://www.burgerking.co.kr/dist/img/logo_delivery.26d1d682.png">
+                <span style="font-size: 40px; font-weight: bold; margin-left:5px; margin-top:8px">딜리버리</span>
+            </div>
+            
+            <div class="header_info" style = "margin-top:0px;">
+                <div>
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAYAAABXuSs3AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NjcxRTM3NjUwNDEyMTFFOTg1RDhCNkM3NUZDQkI0RjEiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NjcxRTM3NjYwNDEyMTFFOTg1RDhCNkM3NUZDQkI0RjEiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo2NzFFMzc2MzA0MTIxMUU5ODVEOEI2Qzc1RkNCQjRGMSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo2NzFFMzc2NDA0MTIxMUU5ODVEOEI2Qzc1RkNCQjRGMSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Ptrgt6YAAAMJSURBVHja3FlNj9JQFH0QSFBRQkgkEeMK3UJIxLiYBYgmw0p2A3/AWTkJ/ApWJmTQf4GGjRMnsNPBWTGAGyMQE900I18uYXje27yS2hTb8h4FPMkhKb09Pe/lffTe5yBiEQKGgbeBN9l/v4ES8BvwJ9kS3AG+BFaBQyA14JDFHrFnbUcKeAKcmTC7jDOmkbLD8EPgRw6zy/iJaQuHB3gMvFqDaYVX7B0eUabvA5trNKxlk72Te2hINppWKPEMnUdsKaMb4oR5sITwhnpar+fDZk1fs3lMG/EL8LoZ48dbZFrha61Jh+Y6DjwDOledGG63mySTSRKNRuXrZrNJ6vU6mU6nPIvEHPgYeK53ExvR4OmZVCpFe70e1aLf78v3OHu9odPRMvZ5hNPpNJ3NZnQZ8B7GcJrf1zN+uqqg1+ulkiRRI2AMxnIYP9WavseznedyOWoWGMv5WYBeF5MwwzMhY7HYWmJ1gB6fq40/4VJzOtcS+49P6oXxPR6ldrttOrbT6fAa31OnW1yz3e/308FgYDi+MQZjBWxI6JkkROxu2WyWzufzpabxHsYI2knRMzkQtTXjiqHX8/gf52qi5QHuRIfAN6KyDp/PRzKZDIlEIvJ1q9UilUqFjMdjkRnZofJDd4wvXPAz4m1+IBCQe9oMJpMJuby85H3leOXJ6XK5aD6fp91ul1oFPlMoFGQNnslpeTn0eDy0VqtRXqAGaq1g/K7S9SMrD5ZKJSoKqGXR9FA9ZqpmHwwGgxSSAmHGUQs1LRivqrf8utlZkUgkCIxNYesaaqGmBdTUxt+y1hiXY0Mh4WUyC5ro8Z3a+HelJWZyStGwoFljXv/6Bn9Fth8Lj+rB+h742ah61Gg0SLFYFOoGNU3gnHnURXzNFVmelC1u1LLyLhSElpXgLrasBHfjvy567nSZeacL++qjFDvH/IWIoxT14VXZhsOrssjDK70ytGjTZ2bWaRF4Cvwg4IAWNZ5t6kj8iH0jm0lGRqKOxB2CG4Ip1QPMn4G3lPwY+Av4FfhD1Iv+CDAAYvQc/hsxCPEAAAAASUVORK5CYII=">
+                </div>
+                <div>
+                    <span>테스트님 안녕하세요</span>
+                    <br>
+                    <storng style="font-weight: bold;">MY킹 바로가기 ></strong>
+                </div>
+            </div>
+        </div>
+
+   </div>
+
+
+
+    <div class="personal_logon">
+        <div class="image-container" >
+            <a href="딜리버리주문내역">
+                <img src="images/delivery_orderlist.png" >
+            </a>
+        </div>
+        <div class="image-container">
+            <a href="카트">
+                <img src="images/delivery_cart.png" >
+            </a>
+        </div>
+    </div>
+
+    <div class="locationwrap">
+        <div class="web_container">
+            <div class="web_container_route">
+                <a href="딜리버리"><span>딜리버리</span></a>
+                <a href="My킹" id="arrow">></a>
+                <a href="My킹"><span>카트 </span></a>
+            </div>
+
+
+            <div class="web_container_my">
+                <div class="location_shop_money">
+                    <div class="location">
+                        <img src="images/location.png">
+                        <span>부산광역시 동래구 동래로 5(...</span>
+                    </div>
+                    <div class="store">
+                        <img src="images/store.png">
+                        <span>부산수안역점</span>
+                    </div>
+                    <div class = "money">
+                        <span>
+                            최소주문금액 : 
+                            <span>14,000원</span>
+                            /
+                            <span>배달팁 : 0원</span>
+                        </span> 
+                    </div>  
+                </div>
+                <div class="location_a_div">
+                    <a href="주소변경사이트" class="change_location_a">
+                         <strong class="change_a">변경</string>
+                    </a>
+                </div>
+            </div>  
+        </div>    
+    </div>
+
+    <div class="orderlist_box">
+        <div class="orderlist_bar">
+            <div class="orderList">
+                <strong>딜리버리 카트</strong>
+            </div>
+        </div>
+        
+        <div class="orderList_data">
+            <div class="orderlist_box_text">
+               <div style="margin-left: 90px;">
+                <button type="button" class="all_choice_btn">
+                    <input type="checkbox" checked="on" class="all_check_box">
+                        <span class="all_choice_btn_txt">전체선택</span>
+                    </button>
+               </div>
+               <ul class="cart_menu_list">
+                <li>
+                    <div class="list01">
+                        <label>
+                            <div style="display: flex;">
+                                <input type="checkbox" class="mono_menu_checkbox">
+                                <span class="menutit">갈릭불고기 라지세트</span>
+                            </div>
+                            
+                            <div class="mono_price"> 11500원 </div>
+                        </label>
+                        <div class="menu_img">
+                            <img src="https://d1cua0vf0mkpiy.cloudfront.net/images/menu/normal/9cadcc5a-ae40-45b9-8875-40129d8ddfa1.png">
+                        </div>
+                    </div>
+                    <div class="set_menu_detail">
+                       <dl>
+                            <dt>재료추가</dt>
+                            <dd>
+                                <ul>
+                                    <li>없음</li>
+                                </ul>
+                                <button class="change_btn"><span>변경</span></button>
+                            </dd>
+                       </dl>
+
+                       <dl>
+                            <dt>사이드</dt>
+                                <dd>
+                                    <div>
+                                        <ul>
+                                        <li>프렌치프라이L</li>
+                                        <span class="plus_price">+0원</span>
+                                        </ul>
+                                    </div>
+                                    
+                                    <button class="change_btn"><span>변경</span></button>
+                                </dd>
+                        </dl>
+                        
+                        <dl>
+                            <dt>음료</dt>
+                            <dd>
+                                <div>
+                                    <ul>
+                                    <li>스프라이트L</li>
+                                    <span class="plus_price">+0원</span>
+                                </ul>
+                                </div>
+                                
+                                <button class="change_btn"><span>변경</span></button>
+                            </dd>
+                        </dl>
+
+                        <div  style = "border-top: 1px solid #f4f4f4;" class="quantity">
+                            <strong  class="quantity_txt">수량</strong>
+                                <div class="quantity_btn">
+                                    <button>-</button>
+                                    <div>
+                                        <input type="number" readonly="readonly">1
+                                    </div>
+                                
+                                    <button>+</button>
+                                </div>
+                            <div class="quantity_price">
+                                <div><strong>합계금액</strong></div>
+                                <div> <span>11500원</span></div>
+                            </div>
+                           
+                        </div>
+                    </div>
+                </li>
+               </ul>
+
+               <div class="totla_price">
+                 <dt><strong>총 주문금액</strong></dt>
+                 <dd><strong>0원</strong></dd>
+               </div>
+                
+                <!-- <div class="fade_logo">
+                    <img src="images/fade_logo.png">
+                </div>
+                <div>
+                    <p>카트에 담긴 메뉴가 없습니다.</p>
+                </div> -->
+            </div>
+
+        </div> 
+        
+    </div>
+
+    <div class="cart_info">
+        
+            <div class="caution">
+                <li>주문서를 작성하기 전에 선택하신 상품명, 수량 및 가격이 정확한지 확인해주세요</li>
+                <li>해당매장의 주문배달 최소금액은 14,000원 입니다.</li>
+            </div>
+    
+            <div class="menu_button">
+                <button type="button">
+                <span>메뉴 추가 +</span>
+                </button>
+            </div> 
+    
+            <div class="menu_button">
+                <button type="button" class="order_btn" style="background-color: #e22219; border: none;">
+                <span >주문하기</span>
+                </button>
+            </div>
+        
+        
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="modal2">
+        <div class="modal_content2">
+            <div class="modal_top2">
+                <span>사이드변경</span>
+                <button type="button" class="closeBtn2">❌</button>
+            </div>
+
+            <div class="modal_middle2">
+                <ul class="menuList2">
+                    <li class="menuList201">
+                        <button type="button">
+                                 <div>
+                                    <img src="https://d1cua0vf0mkpiy.cloudfront.net/images/menu/option/bf80c698-5f34-489e-92dc-6e4c636c27fd.png" alt="">
+                                </div>
+                                <p class="tit2">프렌치프라이L</p>
+                                <p class="price2">+0원</p>
+                        </button>
+                     </li>
+                    
+	                    <li class="menuList202">
+	                        <button type="button class="change_menu_btn"">
+	                            <div>
+	                                 <img src="https://d1cua0vf0mkpiy.cloudfront.net/images/menu/option/88f6b236-6c6c-4b16-be97-16b9db1e2cb3.png   ">
+	                            </div>
+	                            <p class="tit2" >치즈프라이교환</p>
+	                            <p class="price2">+400원</p>
+	                        </button>
+	                    </li>
+
+                </ul>
+            </div>
+
+            <div class="modal_bottom2">
+                    <div>
+                        <button type="button" class="change_menu_btn">
+                        <span>선택</span>
+                        </button>
+                    </div>
+            </div>
+        </div>
+         
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="/static/js/cart.js"></script>
+</body>
+</html>

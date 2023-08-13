@@ -1,0 +1,356 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+  }
+
+body {
+    margin: 0;
+}
+
+/*  */
+.header_div {
+    width: 1400px;
+    background-color: #e22219;
+    height: 175px;
+
+}
+
+.header_left_top {
+    margin-left: 1070px;
+    margin-bottom: 40px;
+}
+
+.header_left_top a{
+    cursor: pointer;
+}
+
+.header_left_top span {
+    padding: 0;
+    margin-left: 10px;
+    width: 70px;
+    color: #fff;
+}
+
+.header_bottom_div {
+    display: flex;
+    color: #fff;
+}
+
+.header_bottom_div img {
+    margin-left: 30px;
+    margin-right: 0px;
+}
+
+.header_bottom_left {
+    display: flex;
+    width: 300px;
+    margin-left: 10px;
+}
+
+.header_info {
+    display: flex;
+}
+
+.header_info img {
+    margin-right: 10px;
+    margin-left: 670px;
+}
+/*  */
+
+.personal_logon {
+    display: flex;
+    padding-top: 170px;  /*이거 해야 보임 */
+}
+
+.personal_logon img {
+    max-width: 100%;
+    max-height: 300px;
+}
+
+.image-container{
+    font-size: 0;   
+}
+
+.locationwrap {
+    background-color: #000;
+    font-size: 14px;
+    color: #ffffff;
+
+    height: 50px;
+}
+
+.web_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    height: 50px;
+}
+
+.web_container_route {
+     margin-left: 67px;
+     margin-right: 160px;
+     padding: 0px 40px; 
+}
+
+.web_container_route a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+#arrow {
+    margin: 0px 12px;
+    color:#766e69;
+}
+
+.location_shop_money {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+   
+}
+
+.location , .store{
+   margin-right: 40px;
+}
+
+.money {
+    margin-right: 20px;
+}
+
+.money a {
+    text-decoration: none;
+    border-radius: 5px;
+    color: #000;
+    background-color: #ffffff;
+    margin-right: 3000px;
+}
+
+.location img, .store img{
+    width: 30px;
+}
+
+.location span, .location img,
+.store span, .store img {
+    vertical-align: middle;
+}
+
+.web_container_my {
+    display: flex;
+}
+
+.location_a_div a{
+    display: inline-block;
+    padding: 5px 13px;
+    margin-right: 90px;
+}
+
+.change_location_a{
+    text-decoration: none;
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
+.change_a {
+    text-decoration: none;
+    
+    color: #000000;
+    font-size: 16px;
+}
+
+
+
+.orderlist_box{
+  
+    background-color: #ffffff;
+    padding: 30px 0px 30px 40px;
+    height: 900px;
+}
+
+.orderList strong{
+    font-size: 40px;
+    font-weight: 900;
+}
+
+.orderList {
+    padding: 0px 0px;
+}
+
+
+.cart_text p{
+   
+    font-size: 24px;
+    color: #766e69;
+}
+
+
+.orderlist_bar{
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 90px;
+}
+
+.orderlist_right  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.orderlist_right button {
+	cursor: pointer;
+}
+
+
+.orderlist_right button{
+
+    font-size: 16px;
+    font-weight: 800;
+    color: #b8b8b8;
+    background-color: #ffffff;
+    border: none;
+}
+
+
+
+.orderlist_right button:hover {
+    color: #e22219;
+    border-bottom: 3px solid #e22219;
+} 
+
+
+.count {
+    color: #e22219;
+
+}
+.orderlist_box_text {
+    color: #766e69;
+    font-size: 24px;
+    width: 1000px;
+    text-align: center;
+}
+
+
+.prdmenu_list {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+ 
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.prdmenu_list button {
+    cursor: pointer;
+    background-color: #fff;
+    height: 300px; 
+    margin: 1px;
+    width: 23%;
+    border: none;
+}
+.prdmenu_list ul {
+    justify-content: center;
+}
+.prdmenu_list li {
+    /* 가로 4개씩 배치하므로 100%를 4등분한 값을 할당 */
+  
+    border: none; /* 테두리 추가 (원하는 스타일로 변경 가능) */
+   
+    margin-bottom: 10px;
+}
+
+.mainmenu_code {
+    display: none;
+}
+.prd_img  img{
+    margin: 0;
+    width: 230px;
+    
+}
+
+.tit strong {
+    color: #000;
+    font-size: 22px;
+}
+.set_info {
+    font-size: 16px;
+}
+
+.price {
+    color :#e22219;
+    font-size: 22px;
+}
+
+.discount_banner img {
+    width: 1160px;
+    height: 98px;
+    margin-top: 25px;
+}
+
+.orderList_data{
+    height: auto;
+    padding: 0px 10px 0px 10px;
+
+}
+
+
+.notice{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 50px 90px 0px 90px;
+    /* padding: 90px 90px 0px 90px; */
+    height: 60px;
+    border: auto;
+    border-bottom: 2px solid;
+  
+
+}
+
+.notice h4 {
+    text-align: left;
+    font-size: 24px;
+    font-weight: 900;
+    margin: 0;
+    
+}
+.notice strong {
+    columns: #2e2e2e;
+    font-size: 18px;
+    font-weight: 900;
+    margin: 0;
+}
+.notice img {
+    width: 30px;
+}
+.notice button {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border: none;
+    margin: 0;
+   
+}
+
+.tip {
+    padding: 5px 80px 5px 65px;
+}
+
+.tip ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tip li {
+    font-weight: 600;
+    padding-bottom: 5px;
+}
+
+.tip strong {
+    font-weight: 800;
+}
+*{
+    margin: auto;
+}
+

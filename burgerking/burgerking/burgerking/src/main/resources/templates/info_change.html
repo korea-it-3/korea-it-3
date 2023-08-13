@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/info_change.css">
+    <title>정보변경</title>
+</head>
+<body>
+    <div class="personal_logon">
+        <div class="image-container" >
+            <a href="딜리버리주문내역">
+                <img src="images/delivery_orderlist.png" >
+            </a>
+        </div>
+        <div class="image-container">
+            <a href="카트">
+                <img src="images/delivery_cart.png" >
+            </a>
+        </div>
+    </div>
+
+    <div class="locationwrap">
+        <div class="web_container">
+            <div class="web_container_route">
+                <a href="딜리버리"><span>딜리버리</span></a>
+                <a href="My킹" id="arrow">></a>
+                <a href="My킹"><span>카트 </span></a>
+            </div>
+
+
+            <div class="web_container_my">
+                <div class="location_shop_money">
+                    <div class="location">
+                        <img src="images/location.png">
+                        <span>부산광역시 동래구 동래로 5(...</span>
+                    </div>
+                    <div class="store">
+                        <img src="images/store.png">
+                        <span>부산수안역점</span>
+                    </div>
+                    <div class = "money">
+                        <span>
+                            최소주문금액 : 
+                            <span>14,000원</span>
+                            /
+                            <span>배달팁 : 0원</span>
+                        </span> 
+                    </div>  
+                </div>
+                <div class="location_a_div">
+                    <a href="주소변경사이트" class="change_location_a">
+                         <strong class="change_a" >변경</string>
+                    </a>
+                </div>
+            </div>  
+        </div>    
+    </div>
+
+    <div class="contentBox1">
+        <div class="contentBox2">
+
+            <div class="contentBox_list">
+                <strong>MY킹 </strong>
+                <span> > 주문내역</span>
+            </div>
+
+            <div class="middle">
+                <div class="myking_info">
+                    <strong>윤미소 님!</strong>
+                    <span class="hi">반갑습니다</span>
+                    <div class="links">
+                        <a href="정보변경" id="link">
+                            <span>정보변경 ></span>
+                        </a>
+                        <a href="MY배달지" id="link">
+                            <span>MY배달지 ></span>
+                        </a>     
+                    </div> 
+                </div>
+                <div class="button_details">
+                    <div class="button_details_membership">
+                        <a href="멤버쉽" class="menbership-link">
+                            
+                                <div class="image-wrapper-membership">
+                                    <img src="images/membership.png" class="membership_img">
+                                </div>
+                            
+                                <div class="text-wrapper-membership">
+                                    <p class="menbership_p">멤버십</p>
+                                    <strong>welcome</strong>
+                                </div>
+                        </a>
+                    </div>
+                    <div class="button_details_coupon">
+                        <a href="나의쿠폰" class="coupon-link">
+                                <div class= "images-wrapper-coupon">
+                                    <img src="images/my_coupon.png" class="coupon_img">
+                                </div>
+                                <div class="text-wrapper-coupon">
+                                    <p class="my_coupon_p">나의쿠폰</p>
+                                    <strong>멤버십</strong>
+                                    <strong>0</strong>
+                                    <strong>딜리버리</strong>
+                                    <span>0</span>  
+                                </div>
+                        </a>
+                    </div>
+                    <div class="button_details_orderList" >
+                        <a href="주문이력" class="order-history-link">
+                            <div class="image-wrapper-order-history">
+                                <span><img src="images/order_history.png" class="order_history_img"></span>
+                            </div>
+                            <div class="text-wrapper-order-history">
+                                 <strong>주문이력</strong>
+                            </div>
+                           
+                        </a>
+                    </div>
+            </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="orderlist_box">
+        <div class="orderlist_bar">
+
+            <div class="userinfo_list">
+                <strong>회원 정보 변경</strong>
+            </div>
+
+            <div class="basicinfo_bar">
+                <h3>
+                    <img src="images/info_basic.png" alt="">
+                    <span >기본정보</span>
+                </h3>
+            </div>
+
+            <div class="info_basic">
+                <div class="info_basic_box">
+                    <dl>
+                        <dt>이메일</dt>
+                        <Dd>yoonmiso@naver.com</Dd>
+                    </dl>
+                    <dl>
+                        <dt>이름</dt>
+                        <Dd>윤미소</Dd>
+                    </dl>
+                    <dl class="phone">
+                        <dt>핸드폰</dt>
+                        <Dd>01012341234</Dd>
+                    
+                        <button style="color: #ffffff;">
+                            <strong style="font-size: 18px;"> 변경</strong></button>
+                    </dl>
+                </div>
+            </div>
+
+            <div class="notbasicinfo_bar">
+                <h3>
+                    <img src="images/info_notibasic.png" alt="">
+                     <span>선택정보</span></h3>
+            </div>
+
+            <div class="info_notbasic">
+                <dl>
+                    <dt>성별</dt>
+                    <dd>
+                        <label>
+                            <input type="radio" name="cd_gender" value="N">
+                        <span>선택안함</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="cd_gender" value="N">
+                        <span>남</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="cd_gender" value="N">
+                        <span>여</span>
+                        </label>
+                    </dd>
+                </dl>
+
+            
+                <dl>
+                    <dt>생년월일</dt>
+                    <dd>
+                        <div>
+                            <label>
+                                <input type="radio" name="birth" value="N">
+                            <span>선택안함</span>
+                            </label>
+                        </div>
+                        <div class="select_birth">
+                            <select id="selectYYYY" >
+                                <option value="selected">선택</option>
+                                <option value="2022">2022년</option>
+                                <option value="2021">2021년</option>
+                                <option value="2020">2020년</option>
+                                <option value="2019">2019년</option>
+                                <option value="2018">2018년</option>
+                                <option value="2017">2017년</option>
+                                <option value="2016">2016년</option>
+                                <option value="2015">2015년</option>
+                                <option value="2014">2014년</option>
+                                <option value="2013">2013년</option>
+                                <option value="2012">2012년</option>
+                                <option value="2011">2011년</option>
+                                <option value="2010">2010년</option>
+                                <option value="2009">2009년</option>
+                                <option value="2008">2008년</option>
+                                <option value="2007">2007년</option>
+                                <option value="2006">2006년</option>
+                                <option value="2005">2005년</option>
+                                <option value="2004">2004년</option>
+                                <option value="2003">2003년</option>
+                                <option value="2002">2002년</option>
+                                <option value="2001">2001년</option>
+                                <option value="2000">2000년</option>
+                            </select>
+                            <select id="selectMM">
+                                <option value="selected">선택</option>
+                                <option value="01">01월</option>
+                                <option value="02">02월</option>
+                                <option value="03">03월</option>
+                                <option value="04">04월</option>
+                                <option value="05">05월</option>
+                                <option value="06">06월</option>
+                                <option value="07">07월</option>
+                                <option value="08">08월</option>
+                                <option value="09">09월</option>
+                                <option value="10">10월</option>
+                                <option value="11">11월</option>
+                                <option value="12">12월</option>
+                            </select>
+                            <select id="selectDD">
+                                <option value="selected">선택</option>
+                                <option value="01">01일</option>
+                                <option value="02">02일</option>
+                                <option value="03">03일</option>
+                                <option value="04">04일</option>
+                                <option value="05">05일</option>
+                                <option value="06">06일</option>
+                                <option value="07">07일</option>
+                                <option value="08">08일</option>
+                                <option value="09">09일</option>
+                                <option value="10">10일</option>
+                                <option value="11">11일</option>
+                                <option value="12">12일</option>
+                                <option value="13">13일</option>
+                                <option value="14">14일</option>
+                                <option value="15">15일</option>
+                                <option value="16">16일</option>
+                                <option value="17">17일</option>
+                                <option value="18">18일</option>
+                                <option value="19">19일</option>
+                                <option value="20">20일</option>
+                                <option value="21">21일</option>
+                                <option value="22">22일</option>
+                                <option value="23">23일</option>
+                                <option value="24">24일</option>
+                                <option value="25">25일</option>
+                                <option value="26">26일</option>
+                                <option value="27">27일</option>
+                                <option value="28">28일</option>
+                                <option value="29">29일</option>
+                                <option value="30">30일</option>
+                                <option value="31">31일</option>
+
+                            </select>
+                        </div>
+                        
+                    </dd>
+                    
+                </dl>
+                <div class="txt">
+                    <span>선택항목 추가 후, 생일쿠폰등 다양한 혜택 받으세요.</span>
+                </div>
+            </div>
+
+            <div class="marketing_bar">
+                <h3>
+                    <img src="images/marketing.png" alt="">
+                    <span>마케팅 정보 수신동의</span></h3>
+            </div>
+            <div class="marketing_agree">
+                <div class="marketing_agree_box">
+                    <div>
+                        <label>
+                            <input type="checkbox">
+                            <span>이메일을 통한 이벤트/ 주문 정보의 수신에 동의합니다.</span>
+                        </label>
+                    </div>
+                    <div >
+                        <label>
+                            <input type="checkbox">
+                            <span>SNS를 통한 이벤트/ 주문 정보의 수신에 동의합니다.</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="lastbutton">
+                <a href="정보변경 취소" class="lastbutton_cancle"><span>취소</span></a>
+                <a href="정보변경 확정" class="lastbutton_change"><span>변경</span></a>
+            </div>
+
+            <div class="leave">
+                <a href="회원탈퇴">회원탈퇴  </a>
+                <img src="images/leave.png">
+            </div>
+
+
+        </div>
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,177 @@
+* {
+    box-sizing: border-box;
+}
+.modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+ 
+    width: 100%;
+    height: 150%;
+    
+    display: none;
+
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+.modal_content {
+    position: absolute;
+    top: 5%;
+    left: 30%;
+    background-color: #fff;
+
+    width: 570px;
+    height: 710px;
+
+    overflow-y: auto; 
+    overflow-x: hidden;
+}
+
+.menu_top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    width: auto;
+    height: 80px;
+}
+
+.menu_top span {
+    font-size: 30px;
+    margin-left: 30px;
+    color: #000;
+    font-weight: 800;
+}
+
+.menu_top button {
+	justify-content: end;
+    border-style: none;
+    
+    background-color: #fff;
+    
+    color: #000;
+    font-size: 30px;
+    margin-left: 350px;
+    cursor: pointer;
+    
+   
+}
+
+.modal_wrap {
+    display: block;
+}
+
+.menu_banner {
+    position: relative;
+    
+    padding-top: 90px;
+    padding-left: 40px;
+    background-image: url('https://www.burgerking.co.kr/dist/img/bg_prd_detailintro_m.02438ba0.gif');
+    background-size: cover;
+    background-color: #f2ebe6;
+    height: 300px;
+}
+.menu_banner span {
+    margin-bottom: 50px;
+}
+.menu_banner img {
+   position: absolute;
+   width: 60%;
+   height: 80%;
+   top: 10%;
+   left: 43%;
+}
+
+
+.name {
+    z-index: 1;
+    position: absolute;
+    font-size: 40px;
+    font-weight: bold;
+    color: #fff;
+    font-weight: 900;
+}
+
+.explain {
+    z-index: 1;
+    position: absolute;
+    font-size: 18px;
+    color: #fff;
+}
+
+.menuList_wrap  {
+    list-style: none;
+    list-style: none;
+    background-color: #f2ebe6;
+
+    
+    margin-top: 0%;
+    margin-bottom: 0px;
+    
+    padding-top: 5px;
+    padding-bottom: 20px;
+    padding-right: 40px;
+    height: auto;
+   
+}
+
+.menuList_wrap li {
+    position: relative;
+    background-color: #fff;
+    margin-bottom: 15px;
+    width: 480px;
+    margin-top: 25px;
+    margin-bottom: 50px;
+    height: auto;
+}
+
+.menuList_wrap img {
+    position: absolute;
+    width: 35%;
+    height: 83%;
+    top: 5%;
+    left: 60%;
+}
+
+.menuList_wrap p {
+    z-index: 1;
+}
+
+.li01 {
+    display: flex;
+    font-size: 24px;
+    font-weight: bold;
+    font-weight: 800;
+    color: #000;
+
+    margin: 0px;
+}
+
+.li02 {
+    display: flex;
+    font-size: 16px;
+    color: #2e2e2e;
+    font-weight: bold;
+    margin: 0px;
+}
+
+.li03 {
+    display:flex;
+
+    color: #e22219;
+    font-size: 24px;
+    font-weight: bold;
+
+    margin: 0px;
+    padding-bottom: 30px;
+}
+
+.menuList_wrap button {
+    border-style: none;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+p {
+    padding-left: 20px;
+}

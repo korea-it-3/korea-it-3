@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="com.bugerking.burgerking.domain.order.OrderRepository">
+
+	<select id="getUser" resultType="com.bugerking.burgerking.domain.user.User">
+		select
+			user_mst.*
+		from
+			user_mst
+		where
+			user_id="yoonmiso@naver.com";
+	</select>
+	
+	<select id="getMainMenu" parameterType="Integer" resultType="com.bugerking.burgerking.domain.order.Menu">
+		select
+			mainmenu_code,
+			mainmenu_name,
+			mainmenu_price,
+			mainmenu_image
+		from
+			menu_main
+		where
+			category = #{category};
+	</select>
+	
+
+	<select id="getOptionMenu" parameterType="Integer" resultType="com.bugerking.burgerking.domain.order.OptionMenu">
+		select
+			mo.optionmenu_code,
+			mo.mainmenu_code,
+<!--			mm.mainmenu_name,
+-->			mo.option_order,
+			mo.optionmenu_name,
+			mo.optionmenu_price,
+			mo.optionmenu_image
+		from
+			menu_option AS mo
+<!--			left outer join menu_main mm on (mm.mainmenu_code = mo.mainmenu_code)
+-->		where
+			mainmenu_code = #{mainMenuCode};
+		
+	</select>
+
+	<insert id="addMenu" parameterType="com.bugerking.burgerking.domain.order.Order">
+		INSERT INTO cart 
+			VALUES (
+			0,
+			"test",
+			#{mainmenu_code},
+			#{optionmenu_code},
+			#{sidechange_code},
+			(
+				SELECT
+					(
+						(SELECT mo.optionmenu_price FROM menu_option mo WHERE mo.optionmenu_code = #{optionmenu_code})
+						+
+						(SELECT msc.sidechange_price FROM menu_side_change msc WHERE msc.sidechange_code = #{sidechange_code})
+					) AS total_price
+			),
+			0,
+			1,
+			NOW(),
+			NOW()
+		);
+		
+	</insert>
+	
+	<select id="getUserCart" resultType="com.bugerking.burgerking.domain.order.DetailCart">
+		SELECT
+		    A.cart_code,
+		    A.total_price,
+		    A.choice,
+		    A.ea,
+		    
+		    mm.mainmenu_name,
+		    mm.mainmenu_code,
+		    
+		    mo.optionmenu_name,
+		    mo.optionmenu_code,
+		    mo.optionmenu_price,
+		    mo.optionmenu_image,
+		    
+		    msc.sidechange_name,
+		    msc.sidechange_code,
+		    msc.sidechange_price
+		    
+		FROM
+		    (SELECT
+		        c.cart_code,
+		        c.mainmenu_code,
+		        c.optionmenu_code,
+		        c.sidechange_code,
+		        c.total_price,
+		        c.choice,
+		        c.ea
+		       
+		    FROM
+		        cart c
+		    WHERE
+		        c.user_id = 'test'
+		    ) AS A
+		LEFT OUTER JOIN menu_main mm ON A.mainmenu_code = mm.mainmenu_code
+		LEFT OUTER JOIN menu_option mo ON A.optionmenu_code = mo.optionmenu_code
+		LEFT OUTER JOIN menu_side_change msc ON A.sidechange_code = msc.sidechange_code;
+
+	</select>
+	
+	<update id="putCartChoice" parameterType="Integer">
+		UPDATE 
+			cart
+		SET 
+		choice = CASE
+   					WHEN choice = 1 THEN 0
+       				WHEN choice = 0 THEN 1
+   			END,
+   			update_date = NOW()
+		WHERE cart_code = #{cartCode};
+	</update>
+	
+	
+	<delete id="deleteCart">
+		delete from
+			cart
+		where
+			user_id = "test" and choice = 0;
+	</delete>
+	
+	
+	<update id ="putUserCart" parameterType="java.util.List" >
+	 <foreach collection="list" item="item" >
+	 UPDATE 
+		cart
+	 SET
+		mainmenu_code = #{item.mainmenu_code},
+	    optionmenu_code = #{item.optionmenu_code},
+	    sidechange_code = #{item.sidechange_code},
+	    total_price = (
+	        SELECT mo.optionmenu_price + msc.sidechange_price
+	        FROM menu_option mo, menu_side_change msc
+	        WHERE mo.optionmenu_code = #{item.optionmenu_code} AND msc.sidechange_code = #{item.sidechange_code}
+	    ),
+    	ea = #{item.ea},
+    	update_date = now()
+	 WHERE
+		 cart_code = #{item.cart_code};
+	</foreach>
+	</update>
+	
+	
+	<update id="putUserInfo" parameterType="com.bugerking.burgerking.domain.user.User">
+		update
+			user_mst
+		set
+			user_phone = #{user_phone},
+			gender = #{gender},
+			user_birth = #{user_birth},
+			marketing1 = #{marketing1},
+			marketing2 =  #{marketing2},
+			update_date = now()
+		where
+			user_id = "test";
+	</update>
+	
+	<select id="getUserLocation" resultType="com.bugerking.burgerking.domain.order.UserLocation">
+	select
+		delivery_address.nickname,
+		delivery_address.address
+	from
+		delivery_address
+	where
+		user_id = "test";
+	</select>
+	
+	<select id="getUserOrderList" resultType="com.bugerking.burgerking.domain.order.GetOrder">
+		SELECT
+		    um.user_phone,
+		    
+		    da.address,
+		    
+		    mm.mainmenu_name,
+		    
+		    mo.optionmenu_name,
+		    mo.optionmenu_price,
+		    
+		    msc.sidechange_name,
+		    msc.sidechange_price,
+		    
+		    c.total_price ,
+		    c.ea AS cart_ea
+		FROM
+		    user_mst um
+			LEFT OUTER JOIN delivery_address da ON um.user_id = da.user_id
+			LEFT OUTER JOIN
+			    (
+		        SELECT
+		            c.cart_code,
+		            c.user_id,
+		            c.mainmenu_code,
+		            c.optionmenu_code,
+		            c.sidechange_code,
+		            c.total_price,
+		            c.choice,
+		            c.ea
+		        FROM
+		            cart c
+		        WHERE
+		            c.user_id = 'test' and c.choice = 0
+			    ) AS c ON um.user_id = c.user_id
+			LEFT OUTER JOIN
+			    menu_main mm ON c.mainmenu_code = mm.mainmenu_code
+			LEFT OUTER JOIN
+			    menu_option mo ON c.optionmenu_code = mo.optionmenu_code
+			LEFT OUTER JOIN
+			    menu_side_change msc ON c.sidechange_code = msc.sidechange_code
+		WHERE
+			um.user_id = "test";
+	</select>
+	
+	<insert id="postUserOrder" parameterType="java.util.List">
+	<foreach collection="list" item="item" separator=";">
+        INSERT INTO 
+            order_info (
+                order_code,
+                user_id,
+                mainmenu_code,
+                optionmenu_code,
+                sidechange_code,
+                pay,
+                address,
+                total_price,
+                ea,
+                create_date,
+                update_date
+            )
+        VALUES 
+	        (
+            0,
+            'miso',
+            #{item.mainmenu_code},
+            #{item.optionmenu_code},
+            #{item.sidechange_code},
+            'naver',
+            #{item.address},
+            #{item.total_price},
+            2,
+            NOW(),
+            NOW()
+	        )
+	</foreach>
+	</insert>
+	
+	<select id="getUserPaidOrder" resultType="com.bugerking.burgerking.domain.order.UserPaidOrder">
+		select 
+			mm.mainmenu_name,
+			mo.optionmenu_name,
+			msc.sidechange_name,
+			
+			oi.total_price,
+			oi.ea,
+			
+			do.address,
+			
+			oi.order_code,
+			oi.create_date,
+			
+			um.user_phone,
+			
+			oi.pay
+			
+		from
+			order_info as oi
+			left outer join menu_main mm on (oi.mainmenu_code = mm.mainmenu_code)
+			left outer join menu_option mo on (oi.optionmenu_code = mo.optionmenu_code)
+			left outer join menu_side_change msc on (oi.sidechange_code = msc.sidechange_code)
+			left outer join delivery_address do on (oi.user_id = do.user_id)
+			left outer join user_mst um on (um.user_id = oi.user_id)
+			
+		where
+			oi.user_id = "test";
+	</select>
+	
+</mapper>
